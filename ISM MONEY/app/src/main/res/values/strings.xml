@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">ISM money</string>
+    <string name="action_settings">Settings</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="title_activity_login">Login</string>
+    <string name="login">Login</string>
+    <string name="username">Admission Number</string>
+    <string name="password">Phone number</string>
+    <string name="Login_text">Login</string>
+    <string name="sign_up">Don\'t have account? Signup</string>
+    <string name="title_activity_otp_verify">OTP_verify</string>
+    <string name="VerifyLogin">Verify OTP</string>
+    <string name="ResendOTP">Resend OTP</string>
+    <string name="Enter_OTP">Enter OTP</string>
+    <string name="title_activity_info_page">InfoPage</string>
+    <string name="Show_Balance">Available Balance</string>
+    <string name="AddmoneyDescription">Add money to wallet</string>
+    <string name="SignOut">SignOut</string>
+    <string name="Pay">Pay</string>
+    <string name="Cancel">Cancel</string>
+    <string name="PayHint">Enter Amount to add to Wallet</string>
+    <string name="Add_Money_text">Add Money</string>
+    <string name="registrations">SAC Registrations</string>
+</resources>
