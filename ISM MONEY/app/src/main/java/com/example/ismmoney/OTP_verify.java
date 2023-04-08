@@ -75,7 +75,7 @@ public class OTP_verify extends AppCompatActivity {
                         super.onCodeSent(s, forceResendingToken);
                         id = s;
                         otpSent = true;
-                        Toast.makeText(OTP_verify.this, "OTP Process Initiated.", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(OTP_verify.this, "OTP Sent.", Toast.LENGTH_SHORT).show();
                     }
                 }).build();
 
@@ -96,7 +96,6 @@ public class OTP_verify extends AppCompatActivity {
                         if (task.isSuccessful()){
                             FirebaseUser userdetails = task.getResult().getUser();
                             Toast.makeText(OTP_verify.this, "User Verified", Toast.LENGTH_SHORT).show();
-                            Toast.makeText(OTP_verify.this, "details = "+userdetails.toString(), Toast.LENGTH_SHORT).show();
                             Intent intent1 = new Intent(OTP_verify.this, DisplayPage.class);
                             startActivity(intent1);
                         }

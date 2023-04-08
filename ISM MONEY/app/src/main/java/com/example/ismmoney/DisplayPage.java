@@ -34,8 +34,10 @@ public class DisplayPage extends AppCompatActivity {
     private Button registrationsPageBut;
     public String admission_no;
     public String user_name;
+    private Button lib_but;
+    private TextView admn_but;
 
-    private FloatingActionButton floatingActionButton;
+    private Button addmoneyBut;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,16 +47,19 @@ public class DisplayPage extends AppCompatActivity {
         name = findViewById(R.id.name);
         phone = findViewById(R.id.phone);
         balance = findViewById(R.id.balance);
-        floatingActionButton = findViewById(R.id.fab);
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
         signOutButton = findViewById(R.id.signoutButton);
         registrationsPageBut = findViewById(R.id.registrations);
+        lib_but = findViewById(R.id.library_registrations);
+        admn_but = findViewById(R.id.admission_no_display);
+        addmoneyBut = findViewById(R.id.addmoney);
         admission_no = "";
         user_name = "";
 
+
+
         if (user != null) {
             // User is signed in
-            Toast.makeText(this, "This is user= "+user.getPhoneNumber(), Toast.LENGTH_SHORT).show();
             phone.setText(user.getPhoneNumber());
             FirebaseFirestore db = FirebaseFirestore.getInstance();
 
@@ -66,19 +71,18 @@ public class DisplayPage extends AppCompatActivity {
                         public void onComplete(@NonNull Task<QuerySnapshot> task) {
                             if (task.isSuccessful()) {
                                 for (QueryDocumentSnapshot document : task.getResult()) {
-                                    Toast.makeText(DisplayPage.this, document.getId() + " => " + document.getData(), Toast.LENGTH_SHORT).show();
                                     name.setText(document.getData().get("Name").toString());
                                     balance.setText(document.getData().get("balance").toString());
                                     admission_no = document.getData().get("admission_no").toString();
                                     user_name = document.getData().get("Name").toString();
+                                    admn_but.setText(admission_no);
                                     SharedPreferences sharedPref = DisplayPage.this.getPreferences(Context.MODE_PRIVATE);
                                     SharedPreferences.Editor editor = sharedPref.edit();
                                     editor.putString("Name", document.getData().get("Name").toString());
                                     editor.putString("admission_no", document.getData().get("admission_no").toString());
                                     editor.putString("phone_no", document.getData().get("phone_no").toString());
                                     editor.apply();
-                                    Toast.makeText(DisplayPage.this, "Putting admisison no = "+document.getData().get("admission_no").toString(), Toast.LENGTH_SHORT).show();
-                                }
+                                  }
                             } else {
                                 Toast.makeText(DisplayPage.this, "Error getting documents: "+ task.getException(), Toast.LENGTH_SHORT).show();
 
@@ -93,14 +97,7 @@ public class DisplayPage extends AppCompatActivity {
         }
 
 
-        floatingActionButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Toast.makeText(DisplayPage.this, "Add Money to Your Wallet", Toast.LENGTH_SHORT).show();
-                Intent intent = new Intent(DisplayPage.this, Pay.class);
-                startActivity(intent);
-            }
-        });
+
         signOutButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -118,6 +115,14 @@ public class DisplayPage extends AppCompatActivity {
                     registrations_intent.putExtra("name", user_name);
                     startActivity(registrations_intent);
                 }
+            }
+        });
+//
+        addmoneyBut.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(DisplayPage.this, Pay.class);
+                startActivity(intent);
             }
         });
     }

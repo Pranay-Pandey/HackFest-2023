@@ -56,10 +56,10 @@ public class Registrations extends AppCompatActivity {
 //        admission_no = sharedPref.getString("admission_no", "25HE256");
 //        Toast.makeText(this, "admission no = "+admission_no, Toast.LENGTH_SHORT).show();
         if (admission_no==""){
-            Toast.makeText(this, "Null Admission no", Toast.LENGTH_SHORT).show();
+//            Toast.makeText(this, "Null Admission no", Toast.LENGTH_SHORT).show();
         }
         else {
-            Toast.makeText(this, "not null"+admission_no, Toast.LENGTH_SHORT).show();
+//            Toast.makeText(this, "not null"+admission_no, Toast.LENGTH_SHORT).show();
             loadpersons(admission_no);
         }
     }
@@ -69,9 +69,9 @@ public class Registrations extends AppCompatActivity {
                 .addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
                     @Override
                     public void onSuccess(QuerySnapshot queryDocumentSnapshots) {
-                        Toast.makeText(Registrations.this, "Received", Toast.LENGTH_SHORT).show();
+//                        Toast.makeText(Registrations.this, "Received", Toast.LENGTH_SHORT).show();
                         List<DocumentSnapshot> documentSnapshotList = queryDocumentSnapshots.getDocuments();
-                        Toast.makeText(Registrations.this, "documentSnapshotList= "+documentSnapshotList.toString(), Toast.LENGTH_SHORT).show();
+//                        Toast.makeText(Registrations.this, "documentSnapshotList= "+documentSnapshotList.toString(), Toast.LENGTH_SHORT).show();
 
                         for (DocumentSnapshot doc:documentSnapshotList){
                             person person = doc.toObject(com.example.ismmoney.person.class);

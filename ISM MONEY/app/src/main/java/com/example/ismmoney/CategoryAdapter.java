@@ -95,7 +95,6 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.MyView
                         .addOnSuccessListener(new OnSuccessListener<Void>() {
                             @Override
                             public void onSuccess(Void aVoid) {
-                                Toast.makeText(context, "DocumentSnapshot successfully updated!", Toast.LENGTH_SHORT).show();
                                 holder.checkoutBtn.setVisibility(View.INVISIBLE);
                             }
                         })

@@ -49,7 +49,6 @@ public class Login extends AppCompatActivity {
         loginButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(Login.this, "Request received = "+adno.getText().toString()+phno.getText().toString()+" COmpleted", Toast.LENGTH_SHORT).show();
                 Intent myIntent = new Intent(Login.this, OTP_verify.class);
                 myIntent.putExtra("admission_number", adno.getText().toString()); //Optional parameters
                 myIntent.putExtra("phone_number", phno.getText().toString());
