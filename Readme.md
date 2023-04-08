@@ -42,10 +42,16 @@
 	<li>Open Android Studio and import the project.</li>
 	<li>Connect to Firebase database.</li>
 	<li>Run the app on an Android device or emulator.</li>
-</ol>
-![0f3539df-c209-4942-a02e-5809f9c9d537](https://user-images.githubusercontent.com/79053599/230706813-ca790590-1580-4760-8280-cdfd9188a284.jpg)
-![image](https://user-images.githubusercontent.com/79053599/230706829-db6c8c05-b47d-4b20-a377-de8e175662d0.png)
-![image](https://user-images.githubusercontent.com/79053599/230706866-70ec48e8-99d9-46b8-90c1-9b61f4a31a01.png)
-![image](https://user-images.githubusercontent.com/79053599/230706901-d4643b9e-c6c6-4346-bf01-d41a5b85c51c.png)
-![image](https://user-images.githubusercontent.com/79053599/230706906-c7f4fb57-88b3-4be1-814c-f896f55e0c04.png)
+</ol><table>
+  <tr>
+    <td><img src="https://user-images.githubusercontent.com/79053599/230706813-ca790590-1580-4760-8280-cdfd9188a284.jpg" width="200" height="400"></td>
+    <td><img src="https://user-images.githubusercontent.com/79053599/230706829-db6c8c05-b47d-4b20-a377-de8e175662d0.png" width="200" height="400"></td>
+    <td><img src="https://user-images.githubusercontent.com/79053599/230706866-70ec48e8-99d9-46b8-90c1-9b61f4a31a01.png" width="200" height="400"></td>
+  </tr>
+  <tr>
+    <td><img src="https://user-images.githubusercontent.com/79053599/230706901-d4643b9e-c6c6-4346-bf01-d41a5b85c51c.png" width="200" height="400"></td>
+    <td><img src="https://user-images.githubusercontent.com/79053599/230706906-c7f4fb57-88b3-4be1-814c-f896f55e0c04.png" width="200" height="400"></td>
+    <td></td>
+  </tr>
+</table>
 
