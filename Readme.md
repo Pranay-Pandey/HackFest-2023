@@ -67,3 +67,27 @@
   </tr>
 </table>
 
+<h1>MY-ISM Automatic Key Dispenser System</h1>
+	<p>This repository contains the code for an automatic key dispenser system for the MY-ISM Android app. The system uses a Raspberry Pi to dispense the keys for the SAC room. The integration of the dispenser system with the MY-ISM app allows the users to request the key for a particular SAC room from their mobile device.</p>
+
+<h2>Features</h2>
+<ul>
+	<li>Request for a specific SAC room key from the MY-ISM app.</li>
+	<li>The app generates a random password for authentication purposes.</li>
+	<li>Enter the admission number and the random password on the Raspberry Pi connected to the servo motor.</li>
+	<li>The servo motor will release the key once it gets rotated.</li>
+</ul>
+
+<h2>Technologies Used</h2>
+<ul>
+	<li>Raspberry Pi</li>
+	<li>Python programming language</li>
+	<li>Firebase database</li>
+	<li>MY-ISM Android app</li>
+</ul>
+
+
+<h2>Conclusion</h2>
+<p>The MY-ISM automatic key dispenser system provides a convenient and efficient way for users to access the keys to their SAC room. The integration of the dispenser system with the MY-ISM app makes the process of key pickup seamless and hassle-free. The use of modern technologies like Raspberry Pi and Firebase database makes the system reliable and secure.</p>
+
+
