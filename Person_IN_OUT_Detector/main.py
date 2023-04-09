@@ -29,8 +29,8 @@ processed_Image = cv2.VideoWriter('Processed_Video_filename_desktop.avi',
                          cv2.VideoWriter_fourcc(*'MJPG'),
                          30, size)
 
-Line_Point = 1050
-Line_Point2 = 1350
+Line_Point = 700
+Line_Point2 = 1600
 in_count = 0
 out_count = 0
 prev_positions = {}
@@ -69,13 +69,13 @@ while ret:
                 elif prev_position[0] < Line_Point and centroid[0] > Line_Point:
                     going_right_transition.append(track_id)
                 
-                elif track_id in going_right_transition:
+                if track_id in going_right_transition:
                     if prev_position[0]< Line_Point2 and centroid[0] > Line_Point2:
                         in_count += 1
                         going_right_transition.remove(track_id)
                     elif prev_position[0]>Line_Point and centroid[0]<Line_Point:
                         going_right_transition.remove(track_id)
-                elif track_id in going_left_transition:
+                if track_id in going_left_transition:
                     if prev_position[0]>Line_Point and centroid[0]<Line_Point:
                         out_count += 1
                         going_left_transition.remove(track_id)
