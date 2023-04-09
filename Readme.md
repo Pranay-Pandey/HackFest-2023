@@ -59,9 +59,11 @@
 
   </tr>
   <tr>
-    <td><img src="https://user-images.githubusercontent.com/79053599/230752806-63cc60d0-7090-4a98-82e0-37a0033fdf3a.png" width="200" height="400"></td>
-    <td><img src="https://user-images.githubusercontent.com/79053599/230752806-63cc60d0-7090-4a98-82e0-37a0033fdf3a.png" width="200" height="400"></td>
-    
+    <td><img src="https://user-images.githubusercontent.com/79053599/230757948-1bb4d8b2-a743-4908-a606-2a6f36e38728.png" width="200" height="400"></td>
+    <td><img src="https://user-images.githubusercontent.com/79053599/230757963-20204c64-12d7-4b58-81f1-cc7dc22f5095.png" width="200" height="400"></td>
+  
+
+
   </tr>
 </table>
 
