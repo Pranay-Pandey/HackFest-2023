@@ -64,7 +64,7 @@ try:
     if doc.exists:
         THE_CODE = doc.to_dict()['random_code']
         THE_ROOM = doc.to_dict()['room_no']
-        print("The Code: "+str(THE_CODE))
+        # print("The Code: "+str(THE_CODE))
         print("The Room: "+str(THE_ROOM))
     else:
         print("Room Not Booked")
